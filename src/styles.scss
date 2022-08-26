@@ -1,6 +1,6 @@
-@use './config-scss/variables.scss';
-@use './config-scss/reset.scss';
-@use './config-scss/rem-calc.scss';
+@import './config-scss/variables.scss';
+@import './config-scss/reset.scss';
+@import './config-scss/rem-calc.scss';
 
 html{
     font-family: 'Roboto', sans-serif;
@@ -8,7 +8,7 @@ html{
 }
 
 main{
-    max-width: rem-calc(600);
-    margin: o auto;
+    width: rem-calc(600);
+    margin: 0 auto;
     box-sizing: border-box;
 }
