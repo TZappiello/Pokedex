@@ -3,6 +3,7 @@
 :host {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     padding: rem-calc(20) 0;
     .pokemon {
@@ -14,6 +15,7 @@
         height: rem-calc(157 - 40);
         padding: rem-calc(20);
 
+        margin-bottom: rem-calc(10);
         border-radius: rem-calc(10);
 
         &__status {
@@ -21,7 +23,7 @@
                 font-size: rem-calc(22);
                 font-style: italic;
                 font-weight: 700;
-
+                text-transform: capitalize;
                 margin-bottom: rem-calc(10);
             }
 
@@ -61,7 +63,7 @@
            background: url('../../../assets/backgroud-pokes.svg') no-repeat;
 
            img {
-            width: rem-calc(80);
+            width: rem-calc(70);
            }
         }
     }
