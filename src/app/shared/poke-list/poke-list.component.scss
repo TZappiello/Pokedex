@@ -1,72 +1,74 @@
 @import '../../../config-scss/rem-calc.scss';
 
 :host {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    padding: rem-calc(20) 0;
-    .pokemon {
-        position: relative;
+    .listagem {
         display: flex;
-        background: var(--branco);
+        justify-content: space-between;
+        flex-wrap: wrap;
 
-        width: calc(49% - 2.5rem);
-        height: rem-calc(157 - 40);
-        padding: rem-calc(20);
+        padding: rem-calc(20) 0;
+        .pokemon {
+            position: relative;
+            display: flex;
+            background: var(--branco);
 
-        margin-bottom: rem-calc(10);
-        border-radius: rem-calc(10);
+            width: calc(49% - 2.5rem);
+            height: rem-calc(157 - 40);
+            padding: rem-calc(20);
 
-        text-decoration: none;
-        color: var(--cor-primaria);
-        &__status {
-            h2{
-                font-size: rem-calc(22);
-                font-style: italic;
-                font-weight: 700;
-                text-transform: capitalize;
-                margin-bottom: rem-calc(10);
-            }
+            margin-bottom: rem-calc(10);
+            border-radius: rem-calc(10);
 
-            ul {
-                display: flex;
-                flex-direction: column;
+            text-decoration: none;
+            color: var(--cor-primaria);
+            &__status {
+                h2{
+                    font-size: rem-calc(22);
+                    font-style: italic;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    margin-bottom: rem-calc(10);
+                }
 
-                li {
-                    background: var(--cinza);
-                    font-size: rem-calc(10);
-
+                ul {
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    flex-direction: column;
 
-                    border-radius: rem-calc(50);
+                    li {
+                        background: var(--cinza);
+                        font-size: rem-calc(10);
 
-                    width: rem-calc(60);
-                    margin-bottom: rem-calc(5);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        border-radius: rem-calc(50);
+
+                        width: rem-calc(60);
+                        margin-bottom: rem-calc(5);
+                    }
                 }
             }
-        }
 
-        &__image {
-           position: absolute; 
+            &__image {
+            position: absolute; 
 
-           display: flex;
-           align-items: center;
-           justify-content: center;            
+            display: flex;
+            align-items: center;
+            justify-content: center;            
 
-           height: rem-calc(90);
-           width: rem-calc(110);
+            height: rem-calc(90);
+            width: rem-calc(110);
 
-           right: rem-calc(20);
-           bottom: rem-calc(20);
+            right: rem-calc(20);
+            bottom: rem-calc(20);
 
-           background: url('../../../assets/backgroud-pokes.svg') no-repeat;
+            background: url('../../../assets/backgroud-pokes.svg') no-repeat;
 
-           img {
-            width: rem-calc(70);
-           }
+            img {
+                width: rem-calc(70);
+            }
+            }
         }
     }
 }
