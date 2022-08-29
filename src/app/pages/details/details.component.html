@@ -3,34 +3,42 @@
 </a>
 
 <main>
-    <section class="pokemon__names">
-        <h1>{{ pokemon[0].name }} </h1>
-        <h2>{{ pokemon[1].names[0].name }}</h2>
-    </section>
-    <section class="pokemon__status">
-        <img 
-        [src]="pokemon[0].sprites.other.dream_world.front_default" 
-        [alt]="pokemon[0].name"
-        >
-
-      <article class="pokemon__status__statistics">
-        <section>
-            <h3>Estatísticas</h3>
-
-            <ol>
-                <li *ngFor="let value of pokemon[0].stats">
-                    {{ value.stat.name }}
-                    
-                    <strong>
-                        {{ value.base_stat }}
-                    </strong>
-                </li>
-            </ol>
+    <ng-template [ngIf]="isLoading"> 
+        <section class="pokemon__names">
+            <h1>{{ pokemon[0].name }} </h1>
+            <h2>{{ pokemon[1].names[0].name }}</h2>
         </section>
+        <section class="pokemon__status">
+            <img 
+            [src]="pokemon[0].sprites.other.dream_world.front_default" 
+            [alt]="pokemon[0].name"
+            >
 
-        <a [routerLink]="['']" class="btn btn__segundo">
-            Voltar
-        </a>
-      </article>  
-    </section>
+        <article class="pokemon__status__statistics">
+            <section>
+                <h3>Estatísticas</h3> <br>
+
+                <ol>
+                    <li *ngFor="let value of pokemon[0].stats">
+                        {{ value.stat.name }}
+                        
+                        <strong>
+                            {{ value.base_stat }}
+                        </strong>
+                    </li>
+                </ol>
+            </section>
+
+            <a [routerLink]="['']" class="btn btn__segundo">
+                Voltar
+            </a>
+        </article>  
+        </section>
+    </ng-template> 
+    <img 
+    *ngIf="carregarError"
+    src="../../../assets/error.png" 
+    alt="Erro ao carregar as informações"
+    width="100%"
+   > 
 </main>
