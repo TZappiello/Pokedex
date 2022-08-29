@@ -18,6 +18,8 @@
         margin-bottom: rem-calc(10);
         border-radius: rem-calc(10);
 
+        text-decoration: none;
+        color: var(--cor-primaria);
         &__status {
             h2{
                 font-size: rem-calc(22);
